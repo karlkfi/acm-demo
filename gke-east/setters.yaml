@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata: # kpt-merge: /setters
+  name: setters
+  annotations:
+    config.kubernetes.io/local-config: "true"
+data:
+  project-id: acm-demo-2022
+  cluster-name: demo-us-east4
+  location: us-east4
+  master-ip-range: 10.254.0.0/28
+  network-ref: projects/acm-demo-2022/global/networks/demo
+  subnet-ref: projects/acm-demo-2022/regions/us-east4/subnetworks/us-east4-demo-subnetwork
+  pods-range-name: pods
+  services-range-name: services
+  security-group: gke-security-groups@environblueprint.joonix.net

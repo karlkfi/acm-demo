@@ -1,0 +1,21 @@
+apiVersion: serviceusage.cnrm.cloud.google.com/v1beta1
+kind: Service
+metadata:
+  name: acm-demo-2022-mci # kpt-set: id-name-mci
+  namespace: config-control
+  annotations:
+    cnrm.cloud.google.com/project-id: acm-demo-2022 # kpt-set: id
+    cnrm.cloud.google.com/deletion-policy: abandon
+spec:
+  resourceID: multiclusteringress.googleapis.com
+---
+apiVersion: serviceusage.cnrm.cloud.google.com/v1beta1
+kind: Service
+metadata:
+  name: acm-demo-2022-mcsd # kpt-set: id-name-mcsd
+  namespace: config-control
+  annotations:
+    cnrm.cloud.google.com/project-id: acm-demo-2022 # kpt-set: id
+    cnrm.cloud.google.com/deletion-policy: abandon
+spec:
+  resourceID: multiclusterservicediscovery.googleapis.com

@@ -1,0 +1,15 @@
+apiVersion: gkehub.cnrm.cloud.google.com/v1beta1
+kind: GKEHubFeature
+metadata:
+  name: feat-mci # kpt-set: feat-mci-name
+  namespace: config-control
+spec:
+  projectRef:
+    external: acm-demo-2022 # kpt-set: id
+  location: global
+  resourceID: multiclusteringress
+  spec:
+    multiclusteringress:
+      # Use the west cluster to configure MCI/MCS
+      configMembershipRef:
+        name: hub-membership-demo-us-west4 # kpt-set: hub-membership-name

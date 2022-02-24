@@ -1,0 +1,10 @@
+apiVersion: kpt.dev/v1
+kind: Kptfile
+metadata:
+  name: gke-west-mci
+info:
+  description: sample description
+inventory:
+  namespace: config-control
+  name: inventory-82602166
+  inventoryID: 28d0cce0a9f13fd410d634931cc9b4fb64ab9102-1645605722518359045

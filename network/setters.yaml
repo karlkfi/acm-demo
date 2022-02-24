@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata: # kpt-merge: /setters
+  name: setters
+  annotations:
+    config.kubernetes.io/local-config: "true"
+data:
+  project-id: acm-demo-2022
+  network-name: demo
+  region: us-central1
+  namespace: config-control
+  prefix: ""
